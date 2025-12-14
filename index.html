@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chat App</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginBox" class="login">
+  <div class="card">
+    <h2>Login</h2>
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button id="loginBtn">Login</button>
+    <button id="registerBtn">Register</button>
+    <p id="error"></p>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" class="app">
+  <aside class="channels">
+    <h3>Channels</h3>
+    <div id="channelList"></div>
+  </aside>
+
+  <main class="chat">
+    <header>
+      <span id="channelName">#general</span>
+      <span id="onlineCount"></span>
+    </header>
+
+    <div id="messages" class="messages"></div>
+
+    <footer>
+      <input id="msg" placeholder="Message">
+      <button id="send">Send</button>
+    </footer>
+  </main>
+</div>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/presence.js"></script>
+<script type="module" src="js/channels.js"></script>
+<script type="module" src="js/chat.js"></script>
+</body>
+</html>
